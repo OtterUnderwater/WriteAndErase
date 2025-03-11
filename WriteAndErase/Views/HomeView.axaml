@@ -1,0 +1,20 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="WriteAndErase.Views.HomeView"
+			 xmlns:vm="using:WriteAndErase.ViewModels"
+			 x:DataType="vm:HomeViewModel">
+	<Grid RowDefinitions="60, *">
+		<Grid Grid.Row="0">
+			<StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+				<Image Width="30" Height="30" Source="/Assets/logo.png" VerticalAlignment="Center"/>
+				<TextBlock Text="Пиши-стирай" Margin="10 0 0 0" Classes="H1" VerticalAlignment="Center"/>
+			</StackPanel>
+			<Button Content="Выйти" Command="{Binding GoAuthCommand}" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+			<TextBlock Text="{Binding Name}" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0 0 10 0"/>
+		</Grid>
+		<UserControl Grid.Row="1" Content="{Binding UCChildren}"/>
+	</Grid>
+</UserControl>

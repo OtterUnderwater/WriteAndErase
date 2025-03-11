@@ -1,0 +1,53 @@
+<Styles xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <Design.PreviewWith>
+    <Border Padding="20">
+    </Border>
+  </Design.PreviewWith>
+
+	<Style Selector="TextBlock.H1">
+		<Setter Property="FontFamily" Value="Comic Sans MS"/>
+		<Setter Property="FontSize" Value="18"/>
+		<Setter Property="FontWeight" Value="Bold"/>
+	</Style>
+	<Style Selector="TextBlock">
+		<Setter Property="FontFamily" Value="Comic Sans MS"/>
+	</Style>
+
+	<Style Selector="TextBox">
+		<Setter Property="FontFamily" Value="Comic Sans MS"/>
+	</Style>
+
+
+	<Style Selector="TextBox:focus">
+		<Setter Property="BorderBrush" Value="#76e383"/>
+		<Style Selector="^ /template/ TextBlock#PART_Watermark">
+			<Setter Property="Foreground" Value="#498C51"/>
+		</Style>
+		<Style Selector="^ /template/ Border#PART_BorderElement">
+			<Setter Property="BorderBrush" Value="#498C51"/>
+		</Style>
+	</Style>
+
+
+	<Style Selector="ListBox">
+		<Setter Property="FontFamily" Value="Segoe UI"/>
+		<Setter Property="Background" Value="#FFFFFF"/>
+	</Style>
+	<Style Selector="ListBoxItem:pointerover /template/ ContentPresenter#PART_ContentPresenter">
+		<Setter Property="Background" Value="#76e383"/>
+	</Style>
+
+	<Style Selector="Button">
+		<Setter Property="FontFamily" Value="Segoe UI"/>
+		<Setter Property="Background" Value="#76e383"/>
+		<Setter Property="BorderBrush" Value="#498C51"/>
+	</Style>
+	<Style Selector="Button:pointerover /template/ ContentPresenter#PART_ContentPresenter">
+		<Setter Property="Background" Value="#76e383"/>
+		<Setter Property="BorderBrush" Value="#498C51"/>
+	</Style>
+	<Style Selector="Button:pressed  /template/ ContentPresenter#PART_ContentPresenter">
+		<Setter Property="Background" Value="#498C51"/>
+	</Style>
+</Styles>
