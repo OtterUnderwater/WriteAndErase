@@ -10,6 +10,9 @@ using WriteAndErase.Views;
 using CommunityToolkit.Mvvm.Input;
 using WriteAndErase.Function;
 using Avalonia;
+using MsBox.Avalonia.Enums;
+using MsBox.Avalonia;
+using System.Threading.Tasks;
 
 namespace WriteAndErase.ViewModels
 {
@@ -29,7 +32,7 @@ namespace WriteAndErase.ViewModels
 		private string _tbcaptcha = "";
 
 		[ObservableProperty]
-		private bool _isInputDisabled = true;
+		private bool _isDisabled = true;
 
 		[ObservableProperty]
 		public bool isVisibleCaptcha = false;
@@ -44,13 +47,13 @@ namespace WriteAndErase.ViewModels
 			Password = "";
 			Tbcaptcha = "";
 			Captcha = null;
-			IsInputDisabled = true;
+			IsDisabled = true;
 			timer.Interval = new TimeSpan(0, 0, 10);
 			timer.Tick += new EventHandler(EventTimer);
 		}
 
 		[RelayCommand]
-		public void GoHomeAuth()
+		public async Task GoHomeAuth()
 		{
 			User? user = MainWindowViewModel.DB.Users.FirstOrDefault(u => u.Password == Password && u.Login == Login);		
 			// Капчи нет
@@ -65,12 +68,13 @@ namespace WriteAndErase.ViewModels
 				else 
 				{
 					Captcha = null;
-					IsInputDisabled = false;
+					IsDisabled = false;
 					IsVisibleCaptcha = false;
 					Login = "";
 					Password = "";
 					Tbcaptcha = "";
 					timer.Start(); // запуск таймера
+					await MessageBoxManager.GetMessageBoxStandard("Доступ временно ограничен", "Попробуйте еще раз через 10 секунд", ButtonEnum.Ok).ShowAsync();			
 				}
 			}
 		}
@@ -130,7 +134,7 @@ namespace WriteAndErase.ViewModels
 		/// <param name="e"></param>
 		private void EventTimer(object sender, EventArgs e)
 		{
-			IsInputDisabled = true;
+			IsDisabled = true;
 			CreateCaptha();
 			timer.Stop();
 		}

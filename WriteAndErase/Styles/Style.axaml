@@ -20,7 +20,7 @@
 
 
 	<Style Selector="TextBox:focus">
-		<Setter Property="BorderBrush" Value="#76e383"/>
+		<Setter Property="BorderBrush" Value="#76E383"/>
 		<Style Selector="^ /template/ TextBlock#PART_Watermark">
 			<Setter Property="Foreground" Value="#498C51"/>
 		</Style>
@@ -35,16 +35,16 @@
 		<Setter Property="Background" Value="#FFFFFF"/>
 	</Style>
 	<Style Selector="ListBoxItem:pointerover /template/ ContentPresenter#PART_ContentPresenter">
-		<Setter Property="Background" Value="#76e383"/>
+		<Setter Property="Background" Value="#76E383"/>
 	</Style>
 
 	<Style Selector="Button">
 		<Setter Property="FontFamily" Value="Segoe UI"/>
-		<Setter Property="Background" Value="#76e383"/>
+		<Setter Property="Background" Value="#76E383"/>
 		<Setter Property="BorderBrush" Value="#498C51"/>
 	</Style>
 	<Style Selector="Button:pointerover /template/ ContentPresenter#PART_ContentPresenter">
-		<Setter Property="Background" Value="#76e383"/>
+		<Setter Property="Background" Value="#76E383"/>
 		<Setter Property="BorderBrush" Value="#498C51"/>
 	</Style>
 	<Style Selector="Button:pressed  /template/ ContentPresenter#PART_ContentPresenter">

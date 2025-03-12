@@ -16,15 +16,15 @@
 		</Grid>
 		<ScrollViewer Grid.Row="1">
 			<StackPanel Margin="10" Width="400" HorizontalAlignment="Center">
-				<TextBox Text="{Binding Login}" Watermark="Логин" IsEnabled="{Binding IsInputDisabled}" Margin="4" Width="400"/>
-				<TextBox Text="{Binding Password}" Watermark="Пароль" IsEnabled="{Binding IsInputDisabled}"
+				<TextBox Text="{Binding Login}" Watermark="Логин" IsEnabled="{Binding IsDisabled}" Margin="4" Width="400"/>
+				<TextBox Text="{Binding Password}" Watermark="Пароль" IsEnabled="{Binding IsDisabled}"
 						 PasswordChar="*" Width="400" Margin="4"/>		
 				<StackPanel IsVisible="{Binding IsVisibleCaptcha}">
 					<TextBox Text="{Binding Tbcaptcha}" Watermark="Текст с капчи" Width="400" Margin="4"/>
 					<UserControl Content="{Binding Captcha}" HorizontalAlignment="Center" Width="400" Margin="4"/>
 				</StackPanel>
 				<Button Content="Авторизироваться" Command="{Binding GoHomeAuthCommand}"
-							HorizontalContentAlignment="Center" Margin="4" Width="400"/>
+						IsEnabled="{Binding IsDisabled}" HorizontalContentAlignment="Center" Margin="4" Width="400"/>
 				<Button Content="Войти как гость" Command="{Binding GoHomeCommand}"
 						HorizontalContentAlignment="Center" Margin="4" Width="400"/>
 

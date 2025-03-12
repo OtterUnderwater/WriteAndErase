@@ -17,7 +17,7 @@ namespace WriteAndErase.ViewModels
 
 		public HomeViewModel(User? user)
 		{
-			MainWindowViewModel.Instance!.UcChildren = new ListProductsView();
+			MainWindowViewModel.Instance!.UcChildren = new ListProductsView(user);
 			if (user != null) Name = user.Surname + " " + user.Name + " " + user.Patronymic;
 		}
 

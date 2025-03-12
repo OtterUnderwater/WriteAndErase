@@ -3,12 +3,16 @@
   "WorkspaceRootPath": "E:\\otter\\avalonia\\WriteAndErase\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7AE40D20-CD0C-4BB5-88F6-AA4EC4912780}|WriteAndErase\\WriteAndErase.csproj|e:\\otter\\avalonia\\writeanderase\\writeanderase\\viewmodels\\homeviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7AE40D20-CD0C-4BB5-88F6-AA4EC4912780}|WriteAndErase\\WriteAndErase.csproj|solutionrelative:writeanderase\\viewmodels\\homeviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7AE40D20-CD0C-4BB5-88F6-AA4EC4912780}|WriteAndErase\\WriteAndErase.csproj|e:\\otter\\avalonia\\writeanderase\\writeanderase\\views\\listproductsview.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}",
+      "RelativeMoniker": "D:0:0:{7AE40D20-CD0C-4BB5-88F6-AA4EC4912780}|WriteAndErase\\WriteAndErase.csproj|solutionrelative:writeanderase\\views\\listproductsview.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7AE40D20-CD0C-4BB5-88F6-AA4EC4912780}|WriteAndErase\\WriteAndErase.csproj|e:\\otter\\avalonia\\writeanderase\\writeanderase\\viewmodels\\mainwindowviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7AE40D20-CD0C-4BB5-88F6-AA4EC4912780}|WriteAndErase\\WriteAndErase.csproj|solutionrelative:writeanderase\\viewmodels\\mainwindowviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7AE40D20-CD0C-4BB5-88F6-AA4EC4912780}|WriteAndErase\\WriteAndErase.csproj|e:\\otter\\avalonia\\writeanderase\\writeanderase\\viewmodels\\listproductsviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7AE40D20-CD0C-4BB5-88F6-AA4EC4912780}|WriteAndErase\\WriteAndErase.csproj|solutionrelative:writeanderase\\viewmodels\\listproductsviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7AE40D20-CD0C-4BB5-88F6-AA4EC4912780}|WriteAndErase\\WriteAndErase.csproj|e:\\otter\\avalonia\\writeanderase\\writeanderase\\viewmodels\\orderviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7AE40D20-CD0C-4BB5-88F6-AA4EC4912780}|WriteAndErase\\WriteAndErase.csproj|solutionrelative:writeanderase\\viewmodels\\orderviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,32 +22,44 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "MainWindowViewModel.cs",
-              "DocumentMoniker": "E:\\otter\\avalonia\\WriteAndErase\\WriteAndErase\\ViewModels\\MainWindowViewModel.cs",
-              "RelativeDocumentMoniker": "WriteAndErase\\ViewModels\\MainWindowViewModel.cs",
-              "ToolTip": "E:\\otter\\avalonia\\WriteAndErase\\WriteAndErase\\ViewModels\\MainWindowViewModel.cs",
-              "RelativeToolTip": "WriteAndErase\\ViewModels\\MainWindowViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-11T17:14:43.754Z",
+              "DocumentIndex": 0,
+              "Title": "ListProductsView.axaml",
+              "DocumentMoniker": "E:\\otter\\avalonia\\WriteAndErase\\WriteAndErase\\Views\\ListProductsView.axaml",
+              "RelativeDocumentMoniker": "WriteAndErase\\Views\\ListProductsView.axaml",
+              "ToolTip": "E:\\otter\\avalonia\\WriteAndErase\\WriteAndErase\\Views\\ListProductsView.axaml",
+              "RelativeToolTip": "WriteAndErase\\Views\\ListProductsView.axaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-03-12T17:50:22.997Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "HomeViewModel.cs",
-              "DocumentMoniker": "E:\\otter\\avalonia\\WriteAndErase\\WriteAndErase\\ViewModels\\HomeViewModel.cs",
-              "RelativeDocumentMoniker": "WriteAndErase\\ViewModels\\HomeViewModel.cs",
-              "ToolTip": "E:\\otter\\avalonia\\WriteAndErase\\WriteAndErase\\ViewModels\\HomeViewModel.cs",
-              "RelativeToolTip": "WriteAndErase\\ViewModels\\HomeViewModel.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAgwBUAAAADAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "ListProductsViewModel.cs",
+              "DocumentMoniker": "E:\\otter\\avalonia\\WriteAndErase\\WriteAndErase\\ViewModels\\ListProductsViewModel.cs",
+              "RelativeDocumentMoniker": "WriteAndErase\\ViewModels\\ListProductsViewModel.cs",
+              "ToolTip": "E:\\otter\\avalonia\\WriteAndErase\\WriteAndErase\\ViewModels\\ListProductsViewModel.cs",
+              "RelativeToolTip": "WriteAndErase\\ViewModels\\ListProductsViewModel.cs",
+              "ViewState": "AgIAADQAAAAAAAAAAAAAwFYAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-11T17:06:35.498Z",
+              "WhenOpened": "2025-03-12T16:44:04.539Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "OrderViewModel.cs",
+              "DocumentMoniker": "E:\\otter\\avalonia\\WriteAndErase\\WriteAndErase\\ViewModels\\OrderViewModel.cs",
+              "RelativeDocumentMoniker": "WriteAndErase\\ViewModels\\OrderViewModel.cs",
+              "ToolTip": "E:\\otter\\avalonia\\WriteAndErase\\WriteAndErase\\ViewModels\\OrderViewModel.cs",
+              "RelativeToolTip": "WriteAndErase\\ViewModels\\OrderViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-12T16:38:29.365Z",
               "EditorCaption": ""
             }
           ]

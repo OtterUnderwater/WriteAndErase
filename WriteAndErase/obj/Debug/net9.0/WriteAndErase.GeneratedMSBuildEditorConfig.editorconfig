@@ -46,3 +46,6 @@ build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
 [E:/otter/avalonia/WriteAndErase/WriteAndErase/Views/MainWindow.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[E:/otter/avalonia/WriteAndErase/WriteAndErase/Views/OrderView.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml

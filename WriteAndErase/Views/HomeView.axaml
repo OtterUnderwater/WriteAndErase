@@ -6,15 +6,21 @@
              x:Class="WriteAndErase.Views.HomeView"
 			 xmlns:vm="using:WriteAndErase.ViewModels"
 			 x:DataType="vm:HomeViewModel">
-	<Grid RowDefinitions="60, *">
-		<Grid Grid.Row="0">
+	
+	<Grid RowDefinitions="auto, auto, *">
+		<Grid Grid.Row="0" Margin="10">
 			<StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
 				<Image Width="30" Height="30" Source="/Assets/logo.png" VerticalAlignment="Center"/>
-				<TextBlock Text="Пиши-стирай" Margin="10 0 0 0" Classes="H1" VerticalAlignment="Center"/>
+				<TextBlock Text="Пиши-стирай" Margin="10 0" Classes="H1" VerticalAlignment="Center"/>
 			</StackPanel>
 			<Button Content="Выйти" Command="{Binding GoAuthCommand}" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-			<TextBlock Text="{Binding Name}" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0 0 10 0"/>
+			<TextBlock Text="{Binding Name}" HorizontalAlignment="Right" VerticalAlignment="Center"/>
 		</Grid>
-		<UserControl Grid.Row="1" Content="{Binding UCChildren}"/>
+		<StackPanel Grid.Row="1" Orientation="Horizontal" VerticalAlignment="Center" Margin="10">
+			<Button Content="Работа с заказами (МЕНЕДЖЕР И АДМИН)" Command=""
+					HorizontalAlignment="Left" VerticalAlignment="Center" />
+		</StackPanel>
+		<UserControl Grid.Row="2" Content="{Binding UCChildren}"/>
 	</Grid>
+	
 </UserControl>
