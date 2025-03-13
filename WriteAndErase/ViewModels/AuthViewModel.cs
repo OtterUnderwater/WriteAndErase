@@ -59,12 +59,12 @@ namespace WriteAndErase.ViewModels
 			// Капчи нет
 			if (Captcha == null)
 			{
-				if (user != null) MainWindowViewModel.Instance!.UserControl = new HomeView(user);
+				if (user != null) MainWindowViewModel.Instance!.UserControl = new ListProductsView(user);
 				else CreateCaptha();
 			}
 			else
 			{
-				if (user != null && Tbcaptcha == _textCaptcha) MainWindowViewModel.Instance!.UserControl = new HomeView(user);
+				if (user != null && Tbcaptcha == _textCaptcha) MainWindowViewModel.Instance!.UserControl = new ListProductsView(user);
 				else 
 				{
 					Captcha = null;
@@ -80,7 +80,7 @@ namespace WriteAndErase.ViewModels
 		}
 
 		[RelayCommand]
-		public void GoHome() => MainWindowViewModel.Instance!.UserControl = new HomeView(null);
+		public void GoHome() => MainWindowViewModel.Instance!.UserControl = new ListProductsView(null);
 
 		/// <summary>
 		/// Генерация капчи и отображение

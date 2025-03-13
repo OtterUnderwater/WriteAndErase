@@ -1,21 +1,21 @@
 using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Markup.Xaml;
-using System.Collections.Generic;
 using WriteAndErase.Models;
 using WriteAndErase.ViewModels;
 
 namespace WriteAndErase.Views;
 
-public partial class OrderView : UserControl
+public partial class ListOrdersView : UserControl
 {
-    public OrderView()
+    public ListOrdersView()
     {
         InitializeComponent();
     }
-	public OrderView(User? user, List<OrdersProduct> ordersProducts)
+
+	public ListOrdersView(User? user)
 	{
 		InitializeComponent();
-		DataContext = new OrderViewModel(user, ordersProducts);
+		DataContext = new ListOrdersViewModel(user);
 	}
 }

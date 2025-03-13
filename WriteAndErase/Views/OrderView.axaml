@@ -3,6 +3,86 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
-             x:Class="WriteAndErase.Views.OrderView">
-	Welcome to Avalonia!
+             x:Class="WriteAndErase.Views.OrderView"
+			 xmlns:conv="using:WriteAndErase.Converters"
+			 xmlns:vm="using:WriteAndErase.ViewModels"
+             x:DataType="vm:OrderViewModel">
+
+	<UserControl.Resources>
+		<conv:ImageConverter x:Key="imgConv"/>
+	</UserControl.Resources>
+
+	<Grid RowDefinitions="auto, *">
+		<Grid Grid.Row="0" Margin="10">
+			<StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+				<Image Width="30" Height="30" Source="/Assets/logo.png" VerticalAlignment="Center"/>
+				<TextBlock Text="Заказ" Margin="10 0" Classes="H1" VerticalAlignment="Center"/>
+			</StackPanel>
+			<Button Content="Назад" Command="{Binding ExitCommand}" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+			<TextBlock Text="{Binding Name}" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+		</Grid>
+		<ScrollViewer Grid.Row="1">
+
+			<Grid RowDefinitions="*, auto">
+				<ListBox Grid.Row="0" ItemsSource="{Binding OrdersProducts}">
+					<ListBox.ItemTemplate>
+						<DataTemplate>
+							<Border BorderThickness="2" BorderBrush="#498C51">
+								<Grid ColumnDefinitions="Auto, *, Auto">
+									<StackPanel Grid.Column="0" VerticalAlignment="Center" Margin="5">
+										<Image Width="100" Height="100" Margin="0 0 15 0"
+										   Source="{Binding ProductArticleNumberNavigation.Image, Converter={StaticResource ResourceKey=imgConv}}"/>
+									</StackPanel>
+									<StackPanel Grid.Column="1">
+										<TextBlock Text="{Binding ProductArticleNumberNavigation.Name}" FontWeight="Bold"/>
+										<TextBlock Text="{Binding ProductArticleNumberNavigation.Description}" TextWrapping="Wrap"/>
+										<TextBlock Text="{Binding ProductArticleNumberNavigation.IdManufacturerNavigation.Name, StringFormat=Производитель: {0}}"/>
+										<TextBlock Text="{Binding ProductArticleNumberNavigation.IdCategoryNavigation.Name, StringFormat=Категория: {0}}"/>
+										<TextBlock Text="{Binding ProductArticleNumberNavigation.IdSupplierNavigation.Name, StringFormat=Поставщик: {0}}"/>
+										<TextBlock>
+											<TextBlock.Text>
+												<MultiBinding StringFormat="Количество на складе: {0} {1}">
+													<Binding Path="ProductArticleNumberNavigation.QuantityInStock"/>
+													<Binding Path="ProductArticleNumberNavigation.IdUnitNavigation.Name"/>
+												</MultiBinding>
+											</TextBlock.Text>
+										</TextBlock>
+										<TextBlock Text="{Binding ProductArticleNumberNavigation.CostWithDiscount, StringFormat=Цена: {0} руб.}"/>
+										<TextBlock Text="{Binding ProductArticleNumberNavigation.CurrentDiscount, StringFormat=Скидка: {0} %}"/>
+									</StackPanel>
+									<StackPanel Grid.Column="2" Margin="10">
+										<TextBlock Text="{Binding Count, StringFormat=Количество: {0}}"/>
+										<Button Command="{Binding $parent[UserControl].((vm:OrderViewModel)DataContext).AddUnitCommand}"
+												Content="+" CommandParameter="{Binding}" Margin="0 10" 
+												HorizontalContentAlignment="Center" HorizontalAlignment="Stretch"/>
+										<Button Command="{Binding $parent[UserControl].((vm:OrderViewModel)DataContext).DeleteUnitCommand}"
+												Content="-" CommandParameter="{Binding}" Margin="0 10"
+												HorizontalContentAlignment="Center" HorizontalAlignment="Stretch"/>
+									</StackPanel>
+								</Grid>
+							</Border>
+						</DataTemplate>
+					</ListBox.ItemTemplate>
+				</ListBox>
+				<StackPanel Grid.Row="1" HorizontalAlignment="Center" Width="450">
+					<TextBlock Text="{Binding FullCost, StringFormat=Сумма заказа: {0:F2} руб.}" FontWeight="Bold" HorizontalAlignment="Center"/>
+					<TextBlock Text="{Binding FullDiscount, StringFormat=Скидка: {0:F2} %}" HorizontalAlignment="Center"/>
+					<StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0 10">
+						<TextBlock Text="Выберите пункт выдачи: " FontSize="14" VerticalAlignment="Center"/>
+						<ComboBox ItemsSource="{Binding PickUpPoint}" SelectedItem="{Binding Order.IdPickUpPointNavigation}"
+								  Width="250">
+							<ComboBox.ItemTemplate>
+								<DataTemplate>
+									<TextBlock Text="{Binding Address}"/>
+								</DataTemplate>
+							</ComboBox.ItemTemplate>
+						</ComboBox>
+					</StackPanel>
+					<Button Command="{Binding SaveOrderCommand}" Content="Сформировать заказ"
+							Width="450" HorizontalContentAlignment="Center" Margin="0 0 0 20"/>
+				</StackPanel>
+			</Grid>
+		</ScrollViewer>
+	</Grid>
+
 </UserControl>

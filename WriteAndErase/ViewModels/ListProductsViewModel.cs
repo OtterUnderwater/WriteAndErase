@@ -1,11 +1,16 @@
+using Avalonia.Controls;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using Microsoft.EntityFrameworkCore;
 using MsBox.Avalonia;
+using MsBox.Avalonia.Enums;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
+using System.Xml.Linq;
 using WriteAndErase.Models;
+using WriteAndErase.Views;
 
 namespace WriteAndErase.ViewModels
 {
@@ -16,10 +21,19 @@ namespace WriteAndErase.ViewModels
 		private Order? _order;
 
 		[ObservableProperty]
+		private string _name = "Гость";
+
+		[ObservableProperty]
 		private List<Product> _products = new();
 
 		[ObservableProperty]
 		private List<Product> _productsPreview = new();
+
+		[ObservableProperty]
+		private bool _isVisibleAdmin = false;
+		[ObservableProperty]
+
+		private bool _isVisibleManager = false;
 
 		[ObservableProperty]
 		private bool _isVisibleButton = false;
@@ -87,6 +101,22 @@ namespace WriteAndErase.ViewModels
 		public ListProductsViewModel(User? user)
 		{
 			_user = user;
+			if (_user != null)
+			{
+				Name = _user.Surname + " " + _user.Name + " " + _user.Patronymic;
+				Role role = MainWindowViewModel.DB.Roles.First(it => it.Id == user!.RoleId);
+				if (role.Name == "Менеджер") IsVisibleManager = true;
+				else if (role.Name == "Администратор")
+				{
+					IsVisibleManager = true;
+					IsVisibleAdmin = true;
+				}
+			}
+			Update();
+			MessageCountProduct = $"{ProductsPreview.Count} из {ProductsPreview.Count}";
+		}
+		private void Update()
+		{
 			Products = MainWindowViewModel.DB.Products
 				.Include(it => it.IdCategoryNavigation)
 				.Include(it => it.IdManufacturerNavigation)
@@ -94,37 +124,7 @@ namespace WriteAndErase.ViewModels
 				.Include(it => it.IdUnitNavigation)
 				.ToList();
 			ProductsPreview = Products;
-			MessageCountProduct = $"{ProductsPreview.Count} из {ProductsPreview.Count}";
 		}
-
-		[RelayCommand]
-		public void AddProduct()
-		{
-			bool flagNoProduct = true;
-			if (_order == null) CreateOrder();
-			foreach (var product in OrdersProducts)
-			{
-				if (product.ProductArticleNumber == SelectedProduct.ArticleNumber)
-				{
-					product.Count++;
-					flagNoProduct = false;
-				}
-			}
-			if (flagNoProduct)
-			{
-				OrdersProduct ordersProduct = new OrdersProduct
-				{
-					OrderId = _order!.Id,
-					ProductArticleNumber = SelectedProduct.ArticleNumber,
-					Count = 1,
-					Order = _order!,
-					ProductArticleNumberNavigation = SelectedProduct,
-				};
-				OrdersProducts.Add(ordersProduct);
-			}
-			if (OrdersProducts.Count() > 0) IsVisibleButton = true;
-		}
-
 		private void CreateOrder()
 		{
 			_order = new Order();
@@ -135,8 +135,7 @@ namespace WriteAndErase.ViewModels
 			MainWindowViewModel.DB.Orders.Add(_order);
 			MainWindowViewModel.DB.SaveChanges();
 		}
-
-		void Filter()
+		private void Filter()
 		{
 			ProductsPreview = Products;
 			if (_selectedFilterType != 0)
@@ -166,6 +165,74 @@ namespace WriteAndErase.ViewModels
 				ProductsPreview = ProductsPreview.Where(it => it.Name.ToLower().Contains(_search.ToLower())).ToList();
 			}
 			MessageCountProduct = $"{ProductsPreview.Count} из {Products.Count}";
-		}	
+		}
+		
+		[RelayCommand]
+		public void AddProductToOrder()
+		{
+			bool flagNoProduct = true;
+			if (_order == null) CreateOrder();
+			foreach (var product in OrdersProducts)
+			{
+				if (product.ProductArticleNumber == SelectedProduct.ArticleNumber)
+				{
+					product.Count++;
+					flagNoProduct = false;
+				}
+			}
+			if (flagNoProduct)
+			{
+				OrdersProduct ordersProduct = new OrdersProduct
+				{
+					OrderId = _order!.Id,
+					ProductArticleNumber = SelectedProduct.ArticleNumber,
+					Count = 1,
+					Order = _order!,
+					ProductArticleNumberNavigation =
+					 MainWindowViewModel.DB.Products
+					 .Include(it => it.IdCategoryNavigation)
+					 .Include(it => it.IdManufacturerNavigation)
+					 .Include(it => it.IdSupplierNavigation)
+					 .Include(it => it.IdUnitNavigation)
+					 .First(it => it.ArticleNumber == SelectedProduct.ArticleNumber),
+				};
+				OrdersProducts.Add(ordersProduct);
+			}
+			if (OrdersProducts.Count() > 0) IsVisibleButton = true;
+		}
+
+		[RelayCommand]
+		public async Task DeleteProduct(Product product)
+		{
+			try
+			{
+				ButtonResult result = await MessageBoxManager.GetMessageBoxStandard("Удаление", "Вы уверены, что хотите удалить товар?", ButtonEnum.YesNo).ShowAsync();
+				if (result == ButtonResult.Yes)
+				{
+					MainWindowViewModel.DB.Products.Remove(product);
+					MainWindowViewModel.DB.SaveChanges();
+					Update();
+				}
+			}
+			catch
+			{
+				await MessageBoxManager.GetMessageBoxStandard("Ошибка", "Не удалось удалить товар", ButtonEnum.Ok).ShowAsync();
+			}
+		}
+
+		[RelayCommand]
+		public void EditProduct(Product product) => MainWindowViewModel.Instance!.UserControl = new EditProductView(_user, product.ArticleNumber);
+
+		[RelayCommand]
+		public void AddProduct() => MainWindowViewModel.Instance!.UserControl = new EditProductView(_user);
+
+		[RelayCommand]
+		public void ViewOrder() => MainWindowViewModel.Instance!.UserControl = new OrderView(_user, _ordersProducts);
+
+		[RelayCommand]
+		public void ViewOrders() => MainWindowViewModel.Instance!.UserControl = new ListOrdersView(_user);
+
+		[RelayCommand]
+		public void GoAuth() => MainWindowViewModel.Instance!.UserControl = new AuthView();
 	}
 }

@@ -6,16 +6,16 @@ using WriteAndErase.ViewModels;
 
 namespace WriteAndErase.Views;
 
-public partial class HomeView : UserControl
+public partial class EditOrderView : UserControl
 {
-    public HomeView()
+    public EditOrderView()
     {
         InitializeComponent();
-	}
+    }
 
-	public HomeView(User? user)
+	public EditOrderView(User? user, Order order)
 	{
 		InitializeComponent();
-		DataContext = new HomeViewModel(user);
+		DataContext = new EditOrderViewModel(user, order);
 	}
 }

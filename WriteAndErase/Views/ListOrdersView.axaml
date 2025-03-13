@@ -1,0 +1,49 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="WriteAndErase.Views.ListOrdersView"	
+			 xmlns:vm="using:WriteAndErase.ViewModels"
+			 x:DataType="vm:ListOrdersViewModel">
+
+	<Grid RowDefinitions="auto, auto, *">
+		<Grid Grid.Row="0" Margin="10">
+			<StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+				<Image Width="30" Height="30" Source="/Assets/logo.png" VerticalAlignment="Center"/>
+				<TextBlock Text="Заказы клиентов" Margin="10 0" Classes="H1" VerticalAlignment="Center"/>
+			</StackPanel>
+			<Button Content="Назад" Command="{Binding ExitCommand}" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+		</Grid>
+
+		<StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+			<ComboBox HorizontalAlignment="Center" Margin="10"
+						  ItemsSource="{Binding ListSortedType}"
+						  SelectedIndex="{Binding SelectedSortedType}"/>
+			<ComboBox HorizontalAlignment="Center" Margin="10"
+					  ItemsSource="{Binding ListFilterType}"
+					  SelectedIndex="{Binding SelectedFilterType}"/>
+		</StackPanel>
+		
+		<ScrollViewer Grid.Row="2">
+			<ListBox ItemsSource="{Binding OrdersPreview}" SelectedItem="{Binding SelectedOrder}">
+				<ListBox.ItemTemplate>
+					<DataTemplate>
+						<Border BorderThickness="2" BorderBrush="Black" Background="{Binding Color}" CornerRadius="10" Padding="15" Margin="10">
+							<StackPanel Grid.Column="1" Margin="10">
+								<TextBlock FontWeight="Bold" Text="{Binding Id, StringFormat='Заказ #{0}'}"/>
+								<TextBlock Text="{Binding FIO}"/>
+								<TextBlock Text="{Binding DateOrder, StringFormat='Дата заказа: {0}'}"/>
+								<TextBlock Text="{Binding DateDelivery, StringFormat='Дата доставки: {0}'}"/>
+								<TextBlock Text="{Binding IdPickUpPointNavigation.Address, StringFormat='Пункт выдачи: {0}'}"/>
+								<TextBlock Text="{Binding Code, StringFormat='Код получения: {0}'}"/>
+								<TextBlock Text="{Binding IdStatusNavigation.Name, StringFormat='Статус: {0}'}"/>
+							</StackPanel>
+						</Border>
+					</DataTemplate>
+				</ListBox.ItemTemplate>
+			</ListBox>
+		</ScrollViewer>	
+	</Grid>
+  
+</UserControl>

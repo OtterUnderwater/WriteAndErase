@@ -38,7 +38,13 @@ build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 [E:/otter/avalonia/WriteAndErase/WriteAndErase/Views/AuthView.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[E:/otter/avalonia/WriteAndErase/WriteAndErase/Views/HomeView.axaml]
+[E:/otter/avalonia/WriteAndErase/WriteAndErase/Views/EditOrderView.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[E:/otter/avalonia/WriteAndErase/WriteAndErase/Views/EditProductView.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[E:/otter/avalonia/WriteAndErase/WriteAndErase/Views/ListOrdersView.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
 [E:/otter/avalonia/WriteAndErase/WriteAndErase/Views/ListProductsView.axaml]

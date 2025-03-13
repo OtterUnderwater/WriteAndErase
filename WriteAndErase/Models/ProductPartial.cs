@@ -1,13 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace WriteAndErase.Models
 {
-	partial class Product
+	public partial class Product
 	{
+		[NotMapped]
 		public string Background
 		{
 			get
@@ -16,7 +18,8 @@ namespace WriteAndErase.Models
 				else return "#FFFFFF";
 			}
 		}
-
+		
+		[NotMapped]
 		public double CostWithDiscount
 		{
 			get
@@ -25,7 +28,8 @@ namespace WriteAndErase.Models
 				else return (double)Cost;
 			}
 		}
-
+		
+		[NotMapped]
 		public double? CostPreview
 		{
 			get
