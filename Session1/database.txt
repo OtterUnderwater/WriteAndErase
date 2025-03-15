@@ -1,0 +1,173 @@
+-- public.categories определение
+
+-- Drop table
+
+-- DROP TABLE public.categories;
+
+CREATE TABLE public.categories (
+	id int4 NOT NULL DEFAULT nextval('categoty_id_seq'::regclass),
+	"name" varchar(100) NOT NULL,
+	CONSTRAINT categoty_pkey PRIMARY KEY (id)
+);
+
+
+-- public.manufacturers определение
+
+-- Drop table
+
+-- DROP TABLE public.manufacturers;
+
+CREATE TABLE public.manufacturers (
+	id int4 NOT NULL DEFAULT nextval('manufacturer_id_seq'::regclass),
+	"name" varchar(100) NOT NULL,
+	CONSTRAINT manufacturer_pkey PRIMARY KEY (id)
+);
+
+
+-- public.pick_up_points определение
+
+-- Drop table
+
+-- DROP TABLE public.pick_up_points;
+
+CREATE TABLE public.pick_up_points (
+	id int4 NOT NULL DEFAULT nextval('pick_up_point_id_seq'::regclass),
+	address varchar(200) NOT NULL,
+	CONSTRAINT pick_up_point_pkey PRIMARY KEY (id)
+);
+
+
+-- public.roles определение
+
+-- Drop table
+
+-- DROP TABLE public.roles;
+
+CREATE TABLE public.roles (
+	id int4 NOT NULL DEFAULT nextval('role_id_seq'::regclass),
+	"name" varchar(100) NOT NULL,
+	CONSTRAINT role_pkey PRIMARY KEY (id)
+);
+
+
+-- public.status определение
+
+-- Drop table
+
+-- DROP TABLE public.status;
+
+CREATE TABLE public.status (
+	id serial4 NOT NULL,
+	"name" varchar(100) NOT NULL,
+	CONSTRAINT status_pkey PRIMARY KEY (id)
+);
+
+
+-- public.suppliers определение
+
+-- Drop table
+
+-- DROP TABLE public.suppliers;
+
+CREATE TABLE public.suppliers (
+	id int4 NOT NULL DEFAULT nextval('supplier_id_seq'::regclass),
+	"name" varchar(100) NOT NULL,
+	CONSTRAINT supplier_pkey PRIMARY KEY (id)
+);
+
+
+-- public.units определение
+
+-- Drop table
+
+-- DROP TABLE public.units;
+
+CREATE TABLE public.units (
+	id serial4 NOT NULL,
+	"name" varchar(10) NOT NULL,
+	CONSTRAINT units_pk PRIMARY KEY (id)
+);
+
+
+-- public.products определение
+
+-- Drop table
+
+-- DROP TABLE public.products;
+
+CREATE TABLE public.products (
+	article_number varchar(100) NOT NULL,
+	"name" varchar(255) NOT NULL,
+	id_unit int4 NULL,
+	"cost" int4 NOT NULL,
+	max_discount_amount int4 NULL,
+	id_manufacturer int4 NULL,
+	id_supplier int4 NULL,
+	id_category int4 NULL,
+	current_discount int4 NULL,
+	quantity_in_stock int4 NULL,
+	description text NULL,
+	image varchar(100) NULL,
+	CONSTRAINT product_pkey PRIMARY KEY (article_number),
+	CONSTRAINT product_category_fkey FOREIGN KEY (id_category) REFERENCES public.categories(id),
+	CONSTRAINT product_fk FOREIGN KEY (id_unit) REFERENCES public.units(id) ON DELETE CASCADE ON UPDATE CASCADE,
+	CONSTRAINT product_manufacturer_fkey FOREIGN KEY (id_manufacturer) REFERENCES public.manufacturers(id),
+	CONSTRAINT product_supplier_fkey FOREIGN KEY (id_supplier) REFERENCES public.suppliers(id)
+);
+
+
+-- public.users определение
+
+-- Drop table
+
+-- DROP TABLE public.users;
+
+CREATE TABLE public.users (
+	id serial4 NOT NULL,
+	surname varchar(100) NOT NULL,
+	"name" varchar(100) NOT NULL,
+	patronymic varchar(100) NULL,
+	login text NOT NULL,
+	"password" text NOT NULL,
+	role_id int4 NOT NULL,
+	CONSTRAINT users_pkey PRIMARY KEY (id),
+	CONSTRAINT users_role_id_fkey FOREIGN KEY (role_id) REFERENCES public.roles(id)
+);
+
+
+-- public.orders определение
+
+-- Drop table
+
+-- DROP TABLE public.orders;
+
+CREATE TABLE public.orders (
+	id serial4 NOT NULL,
+	date_order date NULL,
+	date_delivery date NULL,
+	id_pick_up_point int4 NULL,
+	id_client int4 NULL,
+	code int4 NULL,
+	id_status int4 NOT NULL,
+	CONSTRAINT orders_pkey PRIMARY KEY (id),
+	CONSTRAINT orders_fk FOREIGN KEY (id_client) REFERENCES public.users(id),
+	CONSTRAINT orders_pick_up_fkey FOREIGN KEY (id_pick_up_point) REFERENCES public.pick_up_points(id),
+	CONSTRAINT orders_status_fkey FOREIGN KEY (id_status) REFERENCES public.status(id)
+);
+
+
+-- public.orders_products определение
+
+-- Drop table
+
+-- DROP TABLE public.orders_products;
+
+CREATE TABLE public.orders_products (
+	id int4 NOT NULL DEFAULT nextval('orderproduct_id_seq'::regclass),
+	order_id int4 NOT NULL,
+	product_article_number varchar(100) NOT NULL,
+	count int4 NOT NULL,
+	CONSTRAINT orderproduct_pkey PRIMARY KEY (id),
+	CONSTRAINT orderproduct_order_id_fkey FOREIGN KEY (order_id) REFERENCES public.orders(id),
+	CONSTRAINT orderproduct_product_article_number_fkey FOREIGN KEY (product_article_number) REFERENCES public.products(article_number)
+);

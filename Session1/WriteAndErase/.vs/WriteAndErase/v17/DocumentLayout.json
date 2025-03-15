@@ -1,0 +1,167 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\otter\\avalonia\\WriteAndErase\\Session1\\WriteAndErase\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{7AE40D20-CD0C-4BB5-88F6-AA4EC4912780}|WriteAndErase\\WriteAndErase.csproj|e:\\otter\\avalonia\\writeanderase\\session1\\writeanderase\\writeanderase\\viewmodels\\orderviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7AE40D20-CD0C-4BB5-88F6-AA4EC4912780}|WriteAndErase\\WriteAndErase.csproj|solutionrelative:writeanderase\\viewmodels\\orderviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7AE40D20-CD0C-4BB5-88F6-AA4EC4912780}|WriteAndErase\\WriteAndErase.csproj|e:\\otter\\avalonia\\writeanderase\\session1\\writeanderase\\writeanderase\\viewmodels\\editorderviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7AE40D20-CD0C-4BB5-88F6-AA4EC4912780}|WriteAndErase\\WriteAndErase.csproj|solutionrelative:writeanderase\\viewmodels\\editorderviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7AE40D20-CD0C-4BB5-88F6-AA4EC4912780}|WriteAndErase\\WriteAndErase.csproj|e:\\otter\\avalonia\\writeanderase\\session1\\writeanderase\\writeanderase\\viewmodels\\listproductsviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7AE40D20-CD0C-4BB5-88F6-AA4EC4912780}|WriteAndErase\\WriteAndErase.csproj|solutionrelative:writeanderase\\viewmodels\\listproductsviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7AE40D20-CD0C-4BB5-88F6-AA4EC4912780}|WriteAndErase\\WriteAndErase.csproj|e:\\otter\\avalonia\\writeanderase\\session1\\writeanderase\\writeanderase\\models\\ypcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7AE40D20-CD0C-4BB5-88F6-AA4EC4912780}|WriteAndErase\\WriteAndErase.csproj|solutionrelative:writeanderase\\models\\ypcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7AE40D20-CD0C-4BB5-88F6-AA4EC4912780}|WriteAndErase\\WriteAndErase.csproj|e:\\otter\\avalonia\\writeanderase\\session1\\writeanderase\\writeanderase\\viewmodels\\mainwindowviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7AE40D20-CD0C-4BB5-88F6-AA4EC4912780}|WriteAndErase\\WriteAndErase.csproj|solutionrelative:writeanderase\\viewmodels\\mainwindowviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7AE40D20-CD0C-4BB5-88F6-AA4EC4912780}|WriteAndErase\\WriteAndErase.csproj|e:\\otter\\avalonia\\writeanderase\\session1\\writeanderase\\writeanderase\\viewmodels\\editproductviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7AE40D20-CD0C-4BB5-88F6-AA4EC4912780}|WriteAndErase\\WriteAndErase.csproj|solutionrelative:writeanderase\\viewmodels\\editproductviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7AE40D20-CD0C-4BB5-88F6-AA4EC4912780}|WriteAndErase\\WriteAndErase.csproj|e:\\otter\\avalonia\\writeanderase\\session1\\writeanderase\\writeanderase\\viewmodels\\listordersviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7AE40D20-CD0C-4BB5-88F6-AA4EC4912780}|WriteAndErase\\WriteAndErase.csproj|solutionrelative:writeanderase\\viewmodels\\listordersviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7AE40D20-CD0C-4BB5-88F6-AA4EC4912780}|WriteAndErase\\WriteAndErase.csproj|e:\\otter\\avalonia\\writeanderase\\session1\\writeanderase\\writeanderase\\viewmodels\\viewmodelbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7AE40D20-CD0C-4BB5-88F6-AA4EC4912780}|WriteAndErase\\WriteAndErase.csproj|solutionrelative:writeanderase\\viewmodels\\viewmodelbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7AE40D20-CD0C-4BB5-88F6-AA4EC4912780}|WriteAndErase\\WriteAndErase.csproj|e:\\otter\\avalonia\\writeanderase\\session1\\writeanderase\\writeanderase\\views\\listproductsview.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}",
+      "RelativeMoniker": "D:0:0:{7AE40D20-CD0C-4BB5-88F6-AA4EC4912780}|WriteAndErase\\WriteAndErase.csproj|solutionrelative:writeanderase\\views\\listproductsview.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "EditOrderViewModel.cs",
+              "DocumentMoniker": "E:\\otter\\avalonia\\WriteAndErase\\Session1\\WriteAndErase\\WriteAndErase\\ViewModels\\EditOrderViewModel.cs",
+              "RelativeDocumentMoniker": "WriteAndErase\\ViewModels\\EditOrderViewModel.cs",
+              "ToolTip": "E:\\otter\\avalonia\\WriteAndErase\\Session1\\WriteAndErase\\WriteAndErase\\ViewModels\\EditOrderViewModel.cs",
+              "RelativeToolTip": "WriteAndErase\\ViewModels\\EditOrderViewModel.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-15T01:56:22.965Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "YpContext.cs",
+              "DocumentMoniker": "E:\\otter\\avalonia\\WriteAndErase\\Session1\\WriteAndErase\\WriteAndErase\\Models\\YpContext.cs",
+              "RelativeDocumentMoniker": "WriteAndErase\\Models\\YpContext.cs",
+              "ToolTip": "E:\\otter\\avalonia\\WriteAndErase\\Session1\\WriteAndErase\\WriteAndErase\\Models\\YpContext.cs",
+              "RelativeToolTip": "WriteAndErase\\Models\\YpContext.cs",
+              "ViewState": "AgIAACAAAAAAAAAAAAAAwCsAAABGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-15T00:29:37.139Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "EditProductViewModel.cs",
+              "DocumentMoniker": "E:\\otter\\avalonia\\WriteAndErase\\Session1\\WriteAndErase\\WriteAndErase\\ViewModels\\EditProductViewModel.cs",
+              "RelativeDocumentMoniker": "WriteAndErase\\ViewModels\\EditProductViewModel.cs",
+              "ToolTip": "E:\\otter\\avalonia\\WriteAndErase\\Session1\\WriteAndErase\\WriteAndErase\\ViewModels\\EditProductViewModel.cs",
+              "RelativeToolTip": "WriteAndErase\\ViewModels\\EditProductViewModel.cs",
+              "ViewState": "AgIAACQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-14T21:21:25.606Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "MainWindowViewModel.cs",
+              "DocumentMoniker": "E:\\otter\\avalonia\\WriteAndErase\\Session1\\WriteAndErase\\WriteAndErase\\ViewModels\\MainWindowViewModel.cs",
+              "RelativeDocumentMoniker": "WriteAndErase\\ViewModels\\MainWindowViewModel.cs",
+              "ToolTip": "E:\\otter\\avalonia\\WriteAndErase\\Session1\\WriteAndErase\\WriteAndErase\\ViewModels\\MainWindowViewModel.cs",
+              "RelativeToolTip": "WriteAndErase\\ViewModels\\MainWindowViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-14T21:21:18.501Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "OrderViewModel.cs",
+              "DocumentMoniker": "E:\\otter\\avalonia\\WriteAndErase\\Session1\\WriteAndErase\\WriteAndErase\\ViewModels\\OrderViewModel.cs",
+              "RelativeDocumentMoniker": "WriteAndErase\\ViewModels\\OrderViewModel.cs",
+              "ToolTip": "E:\\otter\\avalonia\\WriteAndErase\\Session1\\WriteAndErase\\WriteAndErase\\ViewModels\\OrderViewModel.cs",
+              "RelativeToolTip": "WriteAndErase\\ViewModels\\OrderViewModel.cs",
+              "ViewState": "AgIAAF4AAAAAAAAAAAAwwH0AAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-14T21:21:11.986Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ViewModelBase.cs",
+              "DocumentMoniker": "E:\\otter\\avalonia\\WriteAndErase\\Session1\\WriteAndErase\\WriteAndErase\\ViewModels\\ViewModelBase.cs",
+              "RelativeDocumentMoniker": "WriteAndErase\\ViewModels\\ViewModelBase.cs",
+              "ToolTip": "E:\\otter\\avalonia\\WriteAndErase\\Session1\\WriteAndErase\\WriteAndErase\\ViewModels\\ViewModelBase.cs",
+              "RelativeToolTip": "WriteAndErase\\ViewModels\\ViewModelBase.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-14T21:21:10.934Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ListOrdersViewModel.cs",
+              "DocumentMoniker": "E:\\otter\\avalonia\\WriteAndErase\\Session1\\WriteAndErase\\WriteAndErase\\ViewModels\\ListOrdersViewModel.cs",
+              "RelativeDocumentMoniker": "WriteAndErase\\ViewModels\\ListOrdersViewModel.cs",
+              "ToolTip": "E:\\otter\\avalonia\\WriteAndErase\\Session1\\WriteAndErase\\WriteAndErase\\ViewModels\\ListOrdersViewModel.cs",
+              "RelativeToolTip": "WriteAndErase\\ViewModels\\ListOrdersViewModel.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-14T21:21:08.796Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ListProductsViewModel.cs",
+              "DocumentMoniker": "E:\\otter\\avalonia\\WriteAndErase\\Session1\\WriteAndErase\\WriteAndErase\\ViewModels\\ListProductsViewModel.cs",
+              "RelativeDocumentMoniker": "WriteAndErase\\ViewModels\\ListProductsViewModel.cs",
+              "ToolTip": "E:\\otter\\avalonia\\WriteAndErase\\Session1\\WriteAndErase\\WriteAndErase\\ViewModels\\ListProductsViewModel.cs",
+              "RelativeToolTip": "WriteAndErase\\ViewModels\\ListProductsViewModel.cs",
+              "ViewState": "AgIAAJ0AAAAAAAAAAAAIwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-14T21:21:01.561Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ListProductsView.axaml",
+              "DocumentMoniker": "E:\\otter\\avalonia\\WriteAndErase\\Session1\\WriteAndErase\\WriteAndErase\\Views\\ListProductsView.axaml",
+              "RelativeDocumentMoniker": "WriteAndErase\\Views\\ListProductsView.axaml",
+              "ToolTip": "E:\\otter\\avalonia\\WriteAndErase\\Session1\\WriteAndErase\\WriteAndErase\\Views\\ListProductsView.axaml",
+              "RelativeToolTip": "WriteAndErase\\Views\\ListProductsView.axaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-03-13T23:01:50.231Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
